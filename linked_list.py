@@ -51,6 +51,7 @@ class LinkedList:
           prev_node = cur
           cur = cur.next
         prev_node.next = cur.next
+      self.length -= 1
 
   def __str__(self):
     elements = []

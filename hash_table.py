@@ -34,6 +34,7 @@ class HashTable:
       for i in range(linked_list.length):
         if linked_list.get(i).key == key:
           linked_list.remove(i)
+          self.size -= 1
           return
 
   def get(self, key):

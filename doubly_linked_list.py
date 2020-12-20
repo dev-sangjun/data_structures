@@ -79,6 +79,7 @@ class DoublyLinkedList:
       if self.length == 1:
         self.head = None
         self.tail = None
+        self.length -= 1
         return
       cur = self.get(index)
       if cur == self.head:
@@ -90,6 +91,7 @@ class DoublyLinkedList:
       else:
         cur.prev.next = cur.next
         cur.next.prev = cur.prev
+      self.length -= 1
 
   def __str__(self):
     elements = []
