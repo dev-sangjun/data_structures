@@ -1,6 +1,6 @@
 class IndexOutOfRangeError(Exception):
-  def __init__(self, message):
-    self.message = message
+  def __init__(self):
+    self.message = "Index is out of range"
   def __str__(self):
     return self.message
 
@@ -31,7 +31,7 @@ class LinkedList:
 
   def get(self, index):
     if index >= self.length or index < 0:
-      raise IndexOutOfRangeError("Index is out of range")
+      raise IndexOutOfRangeError()
     else:
       cur = self.head
       for _ in range(index):
@@ -40,7 +40,7 @@ class LinkedList:
 
   def remove(self, index):
     if index >= self.length or index < 0:
-      raise IndexOutOfRangeError("Index is out of range")
+      raise IndexOutOfRangeError()
     else:
       cur = self.head
       if index == 0:
