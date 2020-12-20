@@ -8,6 +8,9 @@ class Node:
   def __init__(self, element = None):
     self.element = element
     self.next = None
+  
+  def __str__(self):
+    return str(self.element)
 
 class LinkedList:
   def __init__(self):
@@ -49,14 +52,13 @@ class LinkedList:
           cur = cur.next
         prev_node.next = cur.next
 
-  def print(self):
+  def __str__(self):
     elements = []
     cur = self.head
     while cur != None:
       elements.append(cur.element)
       cur = cur.next
-    print(elements)
+    return str(elements)
 
 # test code
 linked_list = LinkedList()
-
